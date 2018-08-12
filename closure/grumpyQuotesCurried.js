@@ -1,7 +1,7 @@
 'use strict';
 
 
-const curriedQuote =  //TODO
+const curriedQuote = (name) => (year) => (quote) => `"${text}"\n\t- ${name} (${year})\n\n`;
 
 
 const quoteCrockford = curriedQuote('Doug Crockford');
@@ -22,6 +22,8 @@ const grumpyQuotes = [
   quoteDijkstra75("The irony of my self-contradiction is lost on me. [Just kidding, he didn't actually say this one - making it all the more true!]") // ibid.
 
 ];
+
+console.log(require.main);
 
 if (require.main === module) {
   const { map } = require('../higher-order/filterMapReduce.js');

@@ -6,17 +6,14 @@ const signMessage = (message, salutation, name) => `${message}\n\n${salutation},
 
 
 // Closure territory
-const signAs = (name) => {
-  // TODO
-};
+const signAs = (name) => (message, salutation) => signMessage(message, salutation, name);
 
-const signWith = (salutation) => {
-  // TODO
-};
 
-const makeSignature = (salutation, name) => {
-  // TODO
-};
+const signWith = (salutation) => (message, name) => signMessage(message, salutation, name);
+
+
+const makeSignature = (salutation, name) => (message) => signMessage(message, salutation, name);
+
 
 
 if (require.main === module) {
